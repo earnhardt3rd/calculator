@@ -28,3 +28,10 @@ steps:
     npm install
     npm run build
   displayName: 'npm install, build, and test'
+
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      Write-Host "${{ convertToJson(variables) }}"
