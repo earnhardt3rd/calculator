@@ -17,6 +17,12 @@ steps:
   inputs:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
+  
+- task: Npm@1
+  displayName: 'npm audit'
+  inputs:
+    command: custom
+    customCommand: 'audit --registry=https://registry.npmjs.org/'
 
 - script: |
     npm install
