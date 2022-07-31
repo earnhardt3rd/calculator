@@ -22,7 +22,7 @@ steps:
   displayName: 'npm audit'
   inputs:
     command: custom
-    customCommand: 'audit fix --registry=https://registry.npmjs.org/'
+    customCommand: 'audit fix --force --registry=https://registry.npmjs.org/'
 
 - script: |
     npm install
